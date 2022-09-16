@@ -1,5 +1,33 @@
-## Steps for winows
+## Steps for Mac
 
+```
+# These could also be in an install script.
+
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Then pass in the Brewfile location...
+brew bundle --file ~/.dotfiles/Brewfile
+
+# ...or move to the directory first.
+cd ~/.dotfiles && brew bundle
+```
+
+## Steps for Winows
+
+### Create symlinks in the Home directory to the real files in the repo.
+```
+# There are better and less manual ways to do this;
+# investigate install scripts and bootstrapping tools.
+
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+```
+
+### npm
+1) Download node js from https://nodejs.org/en/download/
+
+### Oh-my-zsh
 1) Download the latest zsh package:
 https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64
 
